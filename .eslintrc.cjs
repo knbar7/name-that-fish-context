@@ -8,6 +8,17 @@ module.exports = {
         "plugin:react/recommended"
     ],
     "overrides": [
+        {
+            "env": {
+                "node": true
+            },
+            "files": [
+                ".eslintrc.{js,cjs}"
+            ],
+            "parserOptions": {
+                "sourceType": "script"
+            }
+        }
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -17,5 +28,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
     }
 }
